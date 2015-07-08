@@ -6,17 +6,17 @@ def get_input():
         inp = raw_input("Enter a seed number for your random number generation (atleast 2 digits): \n")
         if(len(str(inp))>=2):
             check = True
-            break
+            breakgit add
     return inp
 
 def manipulate():
     inp = get_input()
     inp = long(inp) * long(inp)
-    print inp
+    #print inp
     inp = str(inp)
     inp = inp[:-1]
     inp = inp[1:]
-    print ("this is inp without first and last digits: " + str(inp))
+    #print ("this is inp without first and last digits: " + str(inp))
     inp_counter = 0
     zeros = False
     numLoops = 0
@@ -24,19 +24,19 @@ def manipulate():
     for length in inp:
         numLoops +=1
         if(length == '0'):
-            print ("we encountered a zero at position: " + str(inp_counter) + " here it is: " + length)
+            #print ("we encountered a zero at position: " + str(inp_counter) + " here it is: " + length)
             zeros = True
             inp_counter +=1
 
-    print("number of loops " + str(numLoops))
-    print ("zeros is " + str(zeros))
-    print ("This was number of zeros found " + str(inp_counter))
+    #print("number of loops " + str(numLoops))
+    #print ("zeros is " + str(zeros))
+    #print ("This was number of zeros found " + str(inp_counter))
     if(zeros == True):
         #took out longs on inps
         new_num = long(inp) + long(inp_counter**2)
     else:
         new_num = long(inp)
-    print new_num
+    #print new_num
     return new_num
 
 def mathing():
