@@ -6,7 +6,7 @@ def get_input():
         inp = raw_input("Enter a seed number for your random number generation (atleast 2 digits): \n")
         if(len(str(inp))>=2):
             check = True
-            breakgit add
+            break
     return inp
 
 def manipulate():
