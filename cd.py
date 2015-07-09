@@ -1,3 +1,4 @@
+#This script gives users some of the functionality of a shell script but with the added benefit of being written in Python. Instead of having to program the direct path to the directory you want to change in to, the user can use the cd ~ shortcut by calling goHome. The user cann also use cd .. shortcut by calling goBack.
 #requires mac, linux, or windows powershell
 import os, sys, string, time, subprocess
 
@@ -20,7 +21,6 @@ def goHome(numElements, my_list):
         my_list.pop(-1)
     #for Element in my_list:
         #print Element
-
 def main():
     path = str(os.getcwd())
     print ("starting directory: " + path)
