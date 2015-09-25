@@ -1,10 +1,17 @@
 #My take on John von Neumann's random number generator using middle-square method.
 #outputs a number between 1 and 9
+import calendar
+import time
+print "Date: ", calendar.timegm(time.gmtime())
 def get_input():
     check = False
     while(check ==False):
         inp = raw_input("Enter a posotive seed number for your random number generation (atleast 2 digits): \n")
-        if(len(str(inp))>=2):
+        if(len(inp)==0):
+            inp = calendar.timegm(time.gmtime())
+            return inp
+
+        elif(len(str(inp))>=2):
             check = True
             break
         else:
